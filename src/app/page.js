@@ -17,32 +17,38 @@ const page = () => {
       payerPhone: "+91 966559186876",
       services: "Private Language Session",
       scheduled: "Sun, 07 Jan 2024 2:42 PM",
+      add1: 'class',
+      add2: 'public',
     },
     {
       id: 2,
       createdOn: "Sun, 07 Jan 2024 2:42 PM",
-      payer: "Theodore T.C. Calvin",
+      payer: "himanshu2",
       status: "Inactive",
       email: "theodore@gmail.com",
       payerPhone: "+91 966559186876",
       services: "Private Language Session",
       scheduled: "Sun, 07 Jan 2024 2:42 PM",
+      add1: 'Facility',
+      add2: 'private',
     },
 
     {
       id: 3,
       createdOn: "Sun, 07 Jan 2024 2:42 PM",
-      payer: "Theodore T.C. Calvin",
+      payer: "divyanshu",
       status: "Lead",
       email: "theodore@gmail.com",
       payerPhone: "+91 966559186876",
       services: "Private Language Session",
       scheduled: "Sun, 07 Jan 2024 2:42 PM",
+      add1: 'class',
+      add2: 'public',
     },
     {
       id: 4,
-      createdOn: "Sun, 07 Jan 2024 2:42 PM",
-      payer: "Theodore T.C. Calvin",
+      createdOn: "dannie",
+      payer: "theodore T.C. Calvin",
       status: "Active",
       email: "theodore@gmail.com",
       payerPhone: "+91 966559186876",
@@ -52,7 +58,7 @@ const page = () => {
     {
       id: 5,
       createdOn: "Sun, 07 Jan 2024 2:42 PM",
-      payer: "Theodore T.C. Calvin",
+      payer: "joe root",
       status: "Inactive",
       email: "theodore@gmail.com",
       payerPhone: "+91 966559186876",
@@ -62,7 +68,7 @@ const page = () => {
     {
       id: 6,
       createdOn: "Sun, 07 Jan 2024 2:42 PM",
-      payer: "Theodore T.C. Calvin",
+      payer: "theodore T.C. Calvin",
       status: "Lead",
       email: "theodore@gmail.com",
       payerPhone: "+91 966559186876",
@@ -170,47 +176,73 @@ const page = () => {
       scheduled: "Sun, 07 Jan 2024 2:42 PM",
     },
   ]);
+
+  // TabComponent
+  const tab1Dot = useRef()
+  const tab2Dot = useRef()
+  const tabComp1 = useRef()
+  const tabComp2 = useRef()
+
+  const openTab1 = (e) => {
+    tabComp1.current.classList.remove('hidden')
+    tabComp2.current.classList.add('hidden')
+    tab2Dot.current.classList.remove('bg-black')
+    tab1Dot.current.classList.add('bg-black')
+
+  }
+  const openTab2 = (e) => {
+    tabComp2.current.classList.remove('hidden')
+    tabComp1.current.classList.add('hidden')
+    tab1Dot.current.classList.remove('bg-black')
+    tab2Dot.current.classList.add('bg-black')
+
+  }
   // people Object
-  const [People,Setpeople]=useState([{
-    id:1,
+  const [People, Setpeople] = useState([{
+    id: 1,
     name: "luckyalani",
-     svg: <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 36 36"><path fill="currentColor" d="M30.61 24.52a17.16 17.16 0 0 0-25.22 0a1.5 1.5 0 0 0-.39 1v6A1.5 1.5 0 0 0 6.5 33h23a1.5 1.5 0 0 0 1.5-1.5v-6a1.5 1.5 0 0 0-.39-.98" class="clr-i-solid clr-i-solid-path-1"/><circle cx="18" cy="10" r="7" fill="currentColor" class="clr-i-solid clr-i-solid-path-2"/><path fill="none" d="M0 0h36v36H0z"/></svg>,
+    svg: <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 36 36"><path fill="currentColor" d="M30.61 24.52a17.16 17.16 0 0 0-25.22 0a1.5 1.5 0 0 0-.39 1v6A1.5 1.5 0 0 0 6.5 33h23a1.5 1.5 0 0 0 1.5-1.5v-6a1.5 1.5 0 0 0-.39-.98" class="clr-i-solid clr-i-solid-path-1" /><circle cx="18" cy="10" r="7" fill="currentColor" class="clr-i-solid clr-i-solid-path-2" /><path fill="none" d="M0 0h36v36H0z" /></svg>,
 
   },
   {
-    id:2,
-    name:"Himanshu",
-    svg: <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 36 36"><path fill="currentColor" d="M30.61 24.52a17.16 17.16 0 0 0-25.22 0a1.5 1.5 0 0 0-.39 1v6A1.5 1.5 0 0 0 6.5 33h23a1.5 1.5 0 0 0 1.5-1.5v-6a1.5 1.5 0 0 0-.39-.98" class="clr-i-solid clr-i-solid-path-1"/><circle cx="18" cy="10" r="7" fill="currentColor" class="clr-i-solid clr-i-solid-path-2"/><path fill="none" d="M0 0h36v36H0z"/></svg>,
+    id: 2,
+    name: "Himanshu",
+    svg: <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 36 36"><path fill="currentColor" d="M30.61 24.52a17.16 17.16 0 0 0-25.22 0a1.5 1.5 0 0 0-.39 1v6A1.5 1.5 0 0 0 6.5 33h23a1.5 1.5 0 0 0 1.5-1.5v-6a1.5 1.5 0 0 0-.39-.98" class="clr-i-solid clr-i-solid-path-1" /><circle cx="18" cy="10" r="7" fill="currentColor" class="clr-i-solid clr-i-solid-path-2" /><path fill="none" d="M0 0h36v36H0z" /></svg>,
   },
   {
-    id:3,
-    name:"Rahul",
-    svg: <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 36 36"><path fill="currentColor" d="M30.61 24.52a17.16 17.16 0 0 0-25.22 0a1.5 1.5 0 0 0-.39 1v6A1.5 1.5 0 0 0 6.5 33h23a1.5 1.5 0 0 0 1.5-1.5v-6a1.5 1.5 0 0 0-.39-.98" class="clr-i-solid clr-i-solid-path-1"/><circle cx="18" cy="10" r="7" fill="currentColor" class="clr-i-solid clr-i-solid-path-2"/><path fill="none" d="M0 0h36v36H0z"/></svg>,
+    id: 3,
+    name: "Rahul",
+    svg: <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 36 36"><path fill="currentColor" d="M30.61 24.52a17.16 17.16 0 0 0-25.22 0a1.5 1.5 0 0 0-.39 1v6A1.5 1.5 0 0 0 6.5 33h23a1.5 1.5 0 0 0 1.5-1.5v-6a1.5 1.5 0 0 0-.39-.98" class="clr-i-solid clr-i-solid-path-1" /><circle cx="18" cy="10" r="7" fill="currentColor" class="clr-i-solid clr-i-solid-path-2" /><path fill="none" d="M0 0h36v36H0z" /></svg>,
   },
   {
-    id:4,
-    name:"Vishal",
-    svg: <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 36 36"><path fill="currentColor" d="M30.61 24.52a17.16 17.16 0 0 0-25.22 0a1.5 1.5 0 0 0-.39 1v6A1.5 1.5 0 0 0 6.5 33h23a1.5 1.5 0 0 0 1.5-1.5v-6a1.5 1.5 0 0 0-.39-.98" class="clr-i-solid clr-i-solid-path-1"/><circle cx="18" cy="10" r="7" fill="currentColor" class="clr-i-solid clr-i-solid-path-2"/><path fill="none" d="M0 0h36v36H0z"/></svg>,
-    
+    id: 4,
+    name: "Vishal",
+    svg: <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 36 36"><path fill="currentColor" d="M30.61 24.52a17.16 17.16 0 0 0-25.22 0a1.5 1.5 0 0 0-.39 1v6A1.5 1.5 0 0 0 6.5 33h23a1.5 1.5 0 0 0 1.5-1.5v-6a1.5 1.5 0 0 0-.39-.98" class="clr-i-solid clr-i-solid-path-1" /><circle cx="18" cy="10" r="7" fill="currentColor" class="clr-i-solid clr-i-solid-path-2" /><path fill="none" d="M0 0h36v36H0z" /></svg>,
+
   },
 
 
 
-])
+  ])
 
   const form1 = useRef();
   const form2 = useRef();
   const form3 = useRef();
 
   // input ref
-  const inref=useRef();
+  const inref = useRef([]);
   // input check function
   const uncheck = () => {
     inref.current.checked = false;
   }
-
+// Left Form1
   const [selectedOption, setSelectedOption] = useState("All time");
-  // const [form2Search,setForm2Search] =useState([])
+// Left Form3.1
+  const [selectedOption1, setSelectedOption1] = useState("Select service type");
+// Left Form3.1
+  const [selectedOption2, setSelectedOption2] = useState("Select service type");
+
+ 
 
   const openmodal = () => {
     // filter modal
@@ -243,14 +275,30 @@ const page = () => {
     console.log(formik.values);
   };
 
-  const dropdownButton = useReducer();
-  const dropdownMenu = useReducer();
+  const dropdownButton = useRef();
+  const dropdownButton1 = useRef();
+  const dropdownButton2 = useRef();
+  const dropdownMenu = useRef();
+  const dropdownMenu1 = useRef();
+  const dropdownMenu2 = useRef();
 
   const getSelected = (e) => {
-    console.log(e.target.innerHTML);
+   
     setSelectedOption(e.target.innerHTML);
     dropdownMenu.current.classList.toggle("hidden");
   };
+
+  const getSelected1 = (e) => {
+   
+    setSelectedOption1(e.target.innerHTML);
+    dropdownMenu1.current.classList.toggle("hidden");
+  };
+  const getSelected2 = (e) => {
+   
+    setSelectedOption2(e.target.innerHTML);
+    dropdownMenu2.current.classList.toggle("hidden");
+  };
+  
 
   const dropdownButtonF = (event) => {
     event.stopPropagation();
@@ -258,16 +306,37 @@ const page = () => {
     dropdownMenu.current.classList.toggle("hidden");
   };
 
+  const dropdownButtonF1 = (event) => {
+    event.stopPropagation();
+    console.log("open chala");
+    dropdownMenu1.current.classList.toggle("hidden");
+
+  };
+  const dropdownButtonF2 = (event) => {
+    event.stopPropagation();
+    console.log("open chala");
+    dropdownMenu2.current.classList.toggle("hidden");
+
+  };
+
+  const [chipData,setChipData]=useState([])
+
   const [chips, setChips] = useState([
     { value: "him", id: 1 },
     { value: "him", id: 2 },
   ]);
-  const addChip = (event) => {
-    event.preventDefault();
-    if (inputValue.trim()) {
-      setChips([...chips, { value: inputValue, id: Math.random().toString() }]); // Unique ID for deletion
-      setInputValue("");
-    }
+  const addChip = (checked) => {
+    
+   chipData.map((cData)=>{
+    data.map(object =>
+      { object.id === cData ? setChips([...chips, { value: object.payer, id:object.id }]):null } );
+
+   })
+    // console.log(checked);
+    // if (inputValue.trim()) {
+    //   setChips([...chips, { value: inputValue, id: Math.random().toString() }]); // Unique ID for deletion
+    //   setInputValue("");
+    // }
   };
   const handleDeleteChip = (chipId) => {
     setChips(chips.filter((chip) => chip.id !== chipId));
@@ -280,7 +349,7 @@ const page = () => {
     email: true,
     payerPhone: true,
     services: true,
-    scheduled: true,    
+    scheduled: true,
   });
 
   const [showModal, setShowModal] = useState(false);
@@ -299,7 +368,7 @@ const page = () => {
   const sidebar2 = useRef(null);
 
   const SidebarToggle = () => {
-    console.log("chala");
+    // console.log("chala");
     if (sidebar1.current.classList.contains("-translate-x-full")) {
       sidebar1.current.classList.remove("-translate-x-full");
       sidebar1.current.classList.add("relative overflow-y-auto h-full");
@@ -427,7 +496,7 @@ const page = () => {
           <div className="space-y-2 mb-10">
             <div className="text-sm flex items-center justify-between mt-5">
               <span>Location Name</span>
-              
+
               <span>
                 <svg
                   width="16"
@@ -1597,22 +1666,22 @@ const page = () => {
 
                 <div ref={form1} className="md:w-3/4 p-4 flex flex-col justify-between">
                   <div className="mb-4 flex flex-col  gap-3 ">
-                  <div className="flex justify-end ">
-                    {" "}
-                    <button className="" onClick={closeinputmodal}>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="1em"
-                        height="1em"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          fill="currentColor"
-                          d="M18.36 19.78L12 13.41l-6.36 6.37l-1.42-1.42L10.59 12L4.22 5.64l1.42-1.42L12 10.59l6.36-6.36l1.41 1.41L13.41 12l6.36 6.36z"
-                        />
-                      </svg>
-                    </button>
-                  </div>
+                    <div className="flex justify-end ">
+                      {" "}
+                      <button className="" onClick={closeinputmodal}>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="1em"
+                          height="1em"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            fill="currentColor"
+                            d="M18.36 19.78L12 13.41l-6.36 6.37l-1.42-1.42L10.59 12L4.22 5.64l1.42-1.42L12 10.59l6.36-6.36l1.41 1.41L13.41 12l6.36 6.36z"
+                          />
+                        </svg>
+                      </button>
+                    </div>
                     <label
                       htmlFor="order-time"
                       className="block text-sm font-medium text-zinc-700"
@@ -1637,8 +1706,8 @@ const page = () => {
                           {formik.values.form1Select}
                         </span>
                         <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1 1.5L6 6.5L11 1.5" stroke="#71717A" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+                          <path d="M1 1.5L6 6.5L11 1.5" stroke="#71717A" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
 
                       </button>
                       <div
@@ -1702,67 +1771,67 @@ const page = () => {
                         </ul>
                       </div>
                     </form>
-                    
-                  <div className="flex flex-col md:flex-row md:space-x-4 mb-4">
-                    <div className="md:w-1/2 shadow-sm">
-                      <label
-                        htmlFor="from-date"
-                        className="block text-sm font-medium text-zinc-700"
-                      >
-                        From
-                      </label>
-                      <div className="mt-1 relative rounded-md shadow-sm">
-                        <input
-                          name="form1FromD"
-                          id="form1FromD"
-                          value={formik.values.form1FromD}
-                          onChange={formik.handleChange}
-                          type="date"
-                          className=" block w-full pl-10 pr-3 py-2 border-zinc-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
-                          placeholder="Pick a date"
-                        />
-                      </div>
-                    </div>
-                    <div className="md:w-1/2 shadow-sm">
-                      <label
-                        htmlFor="to-date"
-                        className="block text-sm font-medium text-zinc-700"
-                      >
-                        To
-                      </label>
-                      <div className="mt-1 relative rounded-md shadow-sm">
-                        <input
-                          name="form1ToD"
-                          value={formik.values.form1ToD}
-                          onChange={formik.handleChange}
-                          type="date"
-                          id="form1ToD"
-                          className="block w-full pl-10 pr-3 py-2 border-zinc-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
-                          placeholder="Pick a date"
-                        />
-                      </div>
-                    </div>
 
-                  </div>
+                    <div className="flex flex-col md:flex-row md:space-x-4 mb-4">
+                      <div className="md:w-1/2 shadow-sm">
+                        <label
+                          htmlFor="from-date"
+                          className="block text-sm font-medium text-zinc-700"
+                        >
+                          From
+                        </label>
+                        <div className="mt-1 relative rounded-md shadow-sm">
+                          <input
+                            name="form1FromD"
+                            id="form1FromD"
+                            value={formik.values.form1FromD}
+                            onChange={formik.handleChange}
+                            type="date"
+                            className=" block w-full pl-10 pr-3 py-2 border-zinc-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+                            placeholder="Pick a date"
+                          />
+                        </div>
+                      </div>
+                      <div className="md:w-1/2 shadow-sm">
+                        <label
+                          htmlFor="to-date"
+                          className="block text-sm font-medium text-zinc-700"
+                        >
+                          To
+                        </label>
+                        <div className="mt-1 relative rounded-md shadow-sm">
+                          <input
+                            name="form1ToD"
+                            value={formik.values.form1ToD}
+                            onChange={formik.handleChange}
+                            type="date"
+                            id="form1ToD"
+                            className="block w-full pl-10 pr-3 py-2 border-zinc-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+                            placeholder="Pick a date"
+                          />
+                        </div>
+                      </div>
+
+                    </div>
                   </div>
                   <div className="flex justify-end space-x-4 py-2 px-3 border border-t border-t-gray border-r-0 border-l-0 border-b-0">
-              <button className="bg-zinc-200 text-zinc-700 px-4 py-2 rounded-md">
-                Reset to Default
-              </button>
-              <button
-                type="submit"
-                className="bg-black text-white px-4 py-2 rounded-md"
-              >
-                Apply
-              </button>
-            </div>
+                    <button className="bg-zinc-200 text-zinc-700 px-4 py-2 rounded-md">
+                      Reset to Default
+                    </button>
+                    <button
+                      type="submit"
+                      className="bg-black text-white px-4 py-2 rounded-md"
+                    >
+                      Apply
+                    </button>
+                  </div>
                 </div>
                 {/* Form 2     PEOPLE      */}
                 <div
                   ref={form2}
                   className="hidden md:w-3/4 h-full  p-4 flex flex-col justify-between"
                 >
-                  <section className="flex gap-5">
+                  <section className="flex flex-col gap-5">
                     <div className="flex items-center border rounded-md px-1 py-0 w-full bg-white  border-zinc-300">
                       <svg
                         className="w-5 h-5 text-zinc-500"
@@ -1786,34 +1855,22 @@ const page = () => {
                         onChange={(e) => setForm2Search(e.target.value)}
                       />
                     </div>
-                    <button className="" onClick={closeinputmodal}>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="1em"
-                        height="1em"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          fill="currentColor"
-                          d="M18.36 19.78L12 13.41l-6.36 6.37l-1.42-1.42L10.59 12L4.22 5.64l1.42-1.42L12 10.59l6.36-6.36l1.41 1.41L13.41 12l6.36 6.36z"
-                        />
-                      </svg>
-                    </button>
-                  </section>
-                             <div className="overflow-y-auto px-5 py-5 md:px-0 md:py-0 ">
-                             {data.map((d) => (
-                              
-  d.payer.includes(form2Search) ?
-   ( // Ensure strict comparison 
-    <div className="data flex items-center gap-2" key={d.id}> {/* Add unique key */}
-      <input type="checkbox" ref={inref} id={d.id} name="payerCheckbox" value={d.id}   className="inputcheck" /> 
-      <p className="flex gap-2 items-center w-full border-t-0 border-l-0 border-r-0">{d.svg}{d.payer}</p>  </div>
-  )
-  :null
-))}
-                             </div>
-{/* button div */}
-
+                 
+              
+                  <div className="overflow-y-auto px-5 py-5 md:px-0 md:py-0 ">
+                    {data.map((d) => (
+                       form2Search === "" ? null :
+                      d.payer.includes(form2Search) ?
+                        ( // Ensure strict comparison 
+                          <div className="data flex justify-start gap-2" key={d.id}> {/* Add unique key */}
+                            <input type="checkbox" ref={inref} id={d.id} onClick={(e)=>{setChipData(e.target.getAttribute("id"))}} name="payerCheckbox" value={d.id} className="inputcheck" />
+                            <p className="flex gap-2 items-center w-full border-t-0 border-l-0 border-r-0">{d.svg}{d.payer}</p>  </div>
+                        )
+                        : null
+                    ))}
+                  </div>
+                  {/* button div */}
+    </section>
                   <section>
                     {/* <div className="max-w-[200px] overflow-x-auto py-10 md:py-0">
                       <div className="whitespace-nowrap text-sm break-words w-fit">
@@ -1832,16 +1889,16 @@ const page = () => {
                     </div> */}
 
                     <div className="flex justify-end space-x-4 py-2 px-3 border border-t border-t-gray border-r-0 border-l-0 border-b-0">
-                                  <button className="bg-zinc-200 text-zinc-700 px-4 py-2 rounded-md" onClick={uncheck}>
-                                    Reset to Default
-                                  </button>
-                                  <button
-                                    type="submit"
-                                    className="bg-black text-white px-4 py-2 rounded-md"
-                                  >
-                                    Apply
-                                  </button>
-                                </div>
+                      <button className="bg-zinc-200 text-zinc-700 px-4 py-2 rounded-md" onClick={uncheck}>
+                        Reset to Default
+                      </button>
+                      <button onClick={()=>{addChip()}}
+                        type="submit"
+                        className="bg-black text-white px-4 py-2 rounded-md"
+                      >
+                        Apply
+                      </button>
+                    </div>
                   </section>
                 </div>
 
@@ -1864,24 +1921,253 @@ const page = () => {
                         </svg>
                       </button>
                     </div>
-                    <span>HY</span>
-                  </section>
+
+
+
+                    <div className="max-w-md mx-auto p-4">
+                      <div className="flex space-x-4 mb-4">
+                        <button onClick={(e) => openTab1(e)} id="tab-name" className="flex items-center space-x-2 p-2  border-b-2 border-transparent">
+                          <span ref={tab1Dot} className="w-3 h-3 bg-black rounded-full"></span>
+                          <span>Search by name</span>
+                        </button>
+                        <button id="tab-tags" onClick={(e) => openTab2(e)} className="flex items-center space-x-2 p-2 border-b-2 border-transparent">
+                          <span ref={tab2Dot} className="w-3 h-3  border border-zinc-500 rounded-full"></span>
+                          <span>Search by tags</span>
+                        </button>
+                      </div>
+                      <div ref={tabComp1} id="content-name" className="block">
+                        <div className=" mb-4">
+                          <span className=" left-3 top-2.5 text-zinc-400 flex items-center border-2 border-black rounded-lg h-8 px-2">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M7.33333 12.6667C10.2789 12.6667 12.6667 10.2789 12.6667 7.33333C12.6667 4.38781 10.2789 2 7.33333 2C4.38781 2 2 4.38781 2 7.33333C2 10.2789 4.38781 12.6667 7.33333 12.6667Z" stroke="#3F3F46" stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M14.0001 14.0001L11.1001 11.1001" stroke="#3F3F46" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+                            <input type="text" style={{ height: '-webkit-fill-available' }} placeholder="Search service name" className="w-full h-fit px-2 border rounded-md" onChange={(e) => setForm2Search(e.target.value)} value={form2Search} />
+
+
+                          </span>
+
+                          <div className="overflow-y-auto narrow-line max-h-[197px] px-5 py-5 my-4 md:px-0 md:py-0 my-2">
+                            {data.map((d) => (
+
+                              form2Search === "" ? null :
+                                d.payer.includes(form2Search) ?
+
+                                  ( // Ensure strict comparison 
+                                    <div className="data flex items-center gap-2   justify-between " key={d.id}>
+                                      {console.log(form2Search)}
+                                      <span className="flex gap-2 text-sm">  <input type="checkbox" ref={inref} id={d.id} name="payerCheckbox" value={d.id} className="inputcheck" />
+                                        <p className="flex gap-2 items-center w-full border-t-0 border-l-0 border-r-0">{d.svg}{d.payer}</p>
+                                      </span>
+
+                                      <span className="flex gap-2 text-sm">
+                                        <p className="inputcheck" >{d.add1}</p>
+                                        <button
+                                          className={` px-1 py-1 rounded ${d.add2 == `private` && `text-[#BF8000] bg-transparent `
+                                            } ${d.add2 == `public` && `text-[#039855] bg-transparent `
+                                            }  `}
+                                        >
+                                          {d.add2}
+                                        </button>
+                                      </span>
+
+                                    </div>
+                                  )
+                                  : null
+                            ))}
+
+
+
+                          </div>
+
+
+                        </div>
+                      </div>
+                      <div ref={tabComp2} id="content-tags" className="hidden">
+                        <div className="mb-4">
+                          {/* Select 1 */}
+                          <div className="relative">
+                          <button
+                        ref={dropdownButton1}
+                        onClick={(e) => {
+                          dropdownButtonF1(e);
+                        }}
+                        className="w-full bg-white border border-zinc-300 rounded-lg px-4 py-2 text-left flex justify-between items-center"
+                        fdprocessedid="wbirnm"
+                      >
+                        <span id="selectedOption">
+                          {selectedOption1}
+                          {formik.values.form3Select1}
+                        </span>
+                        <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1 1.5L6 6.5L11 1.5" stroke="#71717A" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                      </button>
+                      <div
+                        id="dropdownMenu"
+                        ref={dropdownMenu1}
+                        onChange={(e) => {
+                          dropdownMenuF1(e);
+                        }}
+                        className="absolute z-50 w-full mt-1 bg-white border border-zinc-300 rounded-lg shadow-lg max-h-[171px] overflow-y-auto hidden"
+                      >
+                        <ul
+                          id="form1Select"
+                          name="form1Select"
+                          value={formik.values.form3Select1}
+                          className="py-1"
+                          onClick={(e) => getSelected1(e)}
+                        >
+                          {/* onClick={(e)=>getSelected(e)} */}
+                          <li
+                            id="1"
+                            className="px-4 py-2 cursor-pointer hover:bg-zinc-100"
+                          >
+                          Show all service type
+                          </li>
+                          <li
+                            id="2"
+                            className="px-4 py-2 cursor-pointer hover:bg-zinc-100"
+                          >
+                           Class
+                          </li>
+                          <li
+                            id="3"
+                            className="px-4 py-2 cursor-pointer hover:bg-zinc-100"
+                          >
+                          Facility
+                          </li>
+                          <li
+                            id="4"
+                            className="px-4 py-2 cursor-pointer hover:bg-zinc-100"
+                          >
+                            Class Pack
+                          </li>
+                          <li
+                            id="5"
+                            className="px-4 py-2 cursor-pointer hover:bg-zinc-100"
+                          >
+                           Membership
+                          </li>
+                          <li
+                            id="6"
+                            className="px-4 py-2 cursor-pointer hover:bg-zinc-100"
+                          >
+                            General items
+                          </li>
+
+                          <li
+                            id="7"
+                            className="px-4 py-2 cursor-pointer hover:bg-zinc-100"
+                          >
+                         Select service type
+                          </li>
+                        </ul>
+                      </div>
+
+                           {/* SELECT 2 */}
+                          </div>
+                        </div>
+                        <div className="mb-4">
+                          <div className="relative">
+                          <button
+                        ref={dropdownButton2}
+                        onClick={(e) => {
+                          dropdownButtonF2(e);
+                        }}
+                        className="w-full bg-white border border-zinc-300 rounded-lg px-4 py-2 text-left flex justify-between items-center"
+                        fdprocessedid="wbirnm"
+                      >
+                        <span id="selectedOption">
+                          {selectedOption2}
+                          {formik.values.form3Select2}
+                        </span>
+                        <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1 1.5L6 6.5L11 1.5" stroke="#71717A" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                      </button>
+                      <div
+                        id="dropdownMenu"
+                        ref={dropdownMenu2}
+                        onChange={(e) => {
+                          dropdownMenuF2(e);
+                        }}
+                        className="absolute z-50 w-full mt-1 bg-white border border-zinc-300 rounded-lg shadow-lg max-h-[171px] overflow-y-auto hidden"
+                      >
+                        <ul
+                          id="form1Select"
+                          name="form1Select"
+                          value={formik.values.form3Select2}
+                          className="py-1"
+                          onClick={(e) => getSelected2(e)}
+                        >
+                          {/* onClick={(e)=>getSelected(e)} */}
+                          <li
+                            id="1"
+                            className="px-4 py-2 cursor-pointer hover:bg-zinc-100"
+                          >
+                           Show all
+                          </li>
+                          <li
+                            id="2"
+                            className="px-4 py-2 cursor-pointer hover:bg-zinc-100"
+                          >
+                          Public
+                          </li>
+                          <li
+                            id="3"
+                            className="px-4 py-2 cursor-pointer hover:bg-zinc-100"
+                          >
+                           Private
+                          </li>
+                          <li
+                            id="4"
+                            className="px-4 py-2 cursor-pointer hover:bg-zinc-100"
+                          >
+                           Disable
+                          </li>
+                          <li
+                            id="5"
+                            className="px-4 py-2 cursor-pointer hover:bg-zinc-100"
+                          >
+                         Draft
+                          </li>
+
+                         
+                        </ul>
+                      </div>
+                          </div>
+                        </div>
+                        <div>
                   
+                        </div>
+                      </div>
+                    </div>
+
+
+
+
+
+                  </section>
+
                   <div className="flex justify-end space-x-4 py-2 px-3 border border-t border-t-gray border-r-0 border-l-0 border-b-0">
-              <button className="bg-zinc-200 text-zinc-700 px-4 py-2 rounded-md">
-                Reset to Default
-              </button>
-              <button
-                type="submit"
-                className="bg-black text-white px-4 py-2 rounded-md"
-              >
-                Apply
-              </button>
-            </div>
+                    <button className="bg-zinc-200 text-zinc-700 px-4 py-2 rounded-md">
+                      Reset to Default
+                    </button>
+                    <button
+                      type="submit"
+                      className="bg-black text-white px-4 py-2 rounded-md"
+                    >
+                      Apply
+                    </button>
+                  </div>
                 </div>
 
               </div>
-              
+
 
               <div></div>
             </Modal>
@@ -2168,13 +2454,10 @@ const page = () => {
                   {tableCols.status && (
                     <td className="px-4 py-2 ">
                       <span
-                        className={` px-3 py-1 rounded ${
-                          d.status == `Lead` && `text-[#3B82F6] bg-[#EFF6FF] `
-                        } ${
-                          d.status == `Active` && `text-[#15803D] bg-[#F0FDF9] `
-                        }  ${
-                          d.status == `Inactive` && `text-black bg-[#F1F5F9] `
-                        } `}
+                        className={` px-3 py-1 rounded ${d.status == `Lead` && `text-[#3B82F6] bg-[#EFF6FF] `
+                          } ${d.status == `Active` && `text-[#15803D] bg-[#F0FDF9] `
+                          }  ${d.status == `Inactive` && `text-black bg-[#F1F5F9] `
+                          } `}
                       >
                         {d.status}
                       </span>
@@ -2217,8 +2500,36 @@ const page = () => {
     //     document.getElementById('sidebar').classList.add('-translate-x-full');
     //   });
     // </>
-    
+
   );
 };
 
 export default page;
+
+
+
+{/* Tabs Logic*/ }
+{/* <script>
+          document.getElementById('tab-name').addEventListener('click', function() {
+            document.getElementById('content-name').classList.remove('hidden');
+            document.getElementById('content-tags').classList.add('hidden');
+            this.querySelector('span').classList.add('bg-black');
+            this.querySelector('span').classList.remove('bg-white');
+            document.getElementById('tab-tags').querySelector('span').classList.remove('bg-black');
+            document.getElementById('tab-tags').querySelector('span').classList.add('bg-white');
+            this.classList.add('border-black');
+            document.getElementById('tab-tags').classList.remove('border-black');
+          });
+        
+          document.getElementById('tab-tags').addEventListener('click', function() {
+            document.getElementById('content-name').classList.add('hidden');
+            document.getElementById('content-tags').classList.remove('hidden');
+            this.querySelector('span').classList.add('bg-black');
+            this.querySelector('span').classList.remove('bg-white');
+            document.getElementById('tab-name').querySelector('span').classList.remove('bg-black');
+            document.getElementById('tab-name').querySelector('span').classList.add('bg-white');
+            this.classList.add('border-black');
+            document.getElementById('tab-name').classList.remove('border-black');
+          });
+        </script>
+  */}
